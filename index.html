@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARVEN AI Agency — Autonomous Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* Fallback if Google Fonts blocked */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  src: local('Palatino Linotype'), local('Palatino'), local('Book Antiqua'), local('Georgia');
+}
+</style>
+<style>
+  :root {
+    --navy:    #07030f;
+    --royal:   #0e0620;
+    --indigo:  #150a30;
+    --violet:  #2d0e6e;
+    --gold:    #c9a84c;
+    --gold-lt: #e8c96a;
+    --gold-dk: #9a7a2e;
+    --cream:   #f5f0e8;
+    --silver:  #a8b0c0;
+    --white:   #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.35;
+  }
+
+  /* ── GOLD LINE TOP ── */
+  .gold-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold-lt), var(--gold), transparent);
+    width: 100%;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 2px;
+    width: 100%;
+    z-index: 100;
+    padding: 18px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(10,14,26,0.98) 0%, rgba(10,14,26,0) 100%);
+  }
+nav-logo {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-decoration: none;
+  }
+
+  .nav-tagline {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--silver);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 5vw 80px;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 25% 15%, rgba(100,20,220,0.85) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 85%, rgba(70,8,160,0.75) 0%, transparent 45%),
+      radial-gradient(ellipse at 55% 45%, rgba(45,13,112,0.9) 0%, transparent 60%),
+      linear-gradient(160deg, #0e0228 0%, #1a0545 40%, #0a0118 100%);
+  }
+
+  /* Radial glow background */
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 80vw;
+    height: 80vw;
+    background: radial-gradient(ellipse at center,
+      rgba(80,15,180,0.7) 0%,
+      rgba(45,8,110,0.5) 40%,
+      transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Decorative corner ornaments */
+  .hero-ornament {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    opacity: 0.3;
+  }
+  .hero-ornament.tl { top: 80px; left: 40px; border-top: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+  .hero-ornament.tr { top: 80px; right: 40px; border-top: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+  .hero-ornament.bl { bottom: 60px; left: 40px; border-bottom: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+  .hero-ornament.br { bottom: 60px; right: 40px; border-bottom: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+
+
+
+  .hero-content { position: relative; z-index: 1; max-width: 860px; }
+
+  .hero-label {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--gold-lt);
+    text-shadow: 0 0 60px rgba(201,168,76,0.3), 0 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;hero-subtitle {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: italic;
+    color: var(--silver);
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 36px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.7s forwards;
+  }
+
+  .hero-proof {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--cream);
+    line-height: 1.9;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .hero-proof span {
+    color: var(--gold-lt);
+    font-weight: 600;
+  }
+
+  .hero-formula {
+    display: inline-block;
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    border: 1px solid var(--gold-dk);
+    padding: 12px 28px;
+    margin-bottom: 52px;
+    background: rgba(201,168,76,0.05);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.9s forwards;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .btn-primary {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: linear-gradient(135deg, var(--gold-lt), var(--gold), var(--gold-dk));
+    border: none;
+    padding: 16px 40px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px rgba(201,168,76,0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(btn-secondary {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid var(--gold-dk);
+    padding: 16px 40px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(201,168,76,0.08);
+    border-color: var(--gold);
+  }
+
+  /* ── SECTION BASE ── */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 100px 5vw;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 600;
+    color: var(--gold-lt);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .section-sub {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--silver);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .gold-rule {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 60px;
+  }
+/* ── PROOF SECTION ── */
+  .proof-section {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--royal) 50%, var(--navy) 100%);
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .proof-card {
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(13,21,53,0.5);
+    border: 1px solid rgba(201,168,76,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .proof-card:hover {
+    background: rgba(201,168,76,0.05);
+    border-color: rgba(201,168,76,0.25);
+  }
+
+  .proof-number {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(201,168,76,0.4);
+  }
+
+  .proof-desc {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    color: var(--silver);
+    font-style: italic;
+  }
+
+  .proof-quote {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.7;
+    padding: 40px;
+    border-left: 2px solid var(--gold-dk);
+    border-right: 2px solid var(--gold-dk);
+    position: relative;
+  }
+
+  .proof-quote::before {
+    content: '❝';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: var(--gold);
+    background: var(--navy);
+    padding: 0 12px;
+  }
+
+  /* ── SERVICES ── */
+  .services-section {
+    background: var(--navy);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(201,168,76,0.1);
+  }
+
+  .service-card {
+    background: var(--navy);
+    padding: 44px 36px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-dk), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .service-card:hover { background: rgba(13,21,53,0.8); }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-name {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .service-desc {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    color: var(--silver);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .service-price {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.75rem;
+    color: var(--gold-dk);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── PILOT ── */
+  .pilot-section {
+    background: linear-gradient(135deg, var(--royal) 0%, var(--indigo) 50%, var(--violet) 100%);
+  }
+
+  .pilot-box {
+    max-width: 780px;
+    margin: 0 auto;
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 60px;
+    text-align: center;
+    position: relative;
+    background: rgba(10,14,26,0.4);
+  }
+
+  .pilot-box::before,
+  .pilot-box::after {
+    content: '◆';
+    position: absolute;
+    color: var(--gold);
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+  .pilot-box::before { top: -10px; left: 50%; transform: translateX(-50%); background: var(--royal); padding: 0 16px; }
+  .pilot-box::after { bottom: -10px; left: 50%; transform: translateX(-50%); background: var(--royal); padding: 0 16px; }
+
+  .pilot-title {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    color: var(--gold-lt);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .pilot-desc {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    color: var(--cream);
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+
+  .pilot-list {
+    list-style: none;
+    margin-bottom: 44px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .pilot-list li {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    color: var(--cream);
+    padding: 6px 0;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .pilot-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* ── FOUNDER ── */
+  .founder-section {
+    background: var(--navy);
+  }
+
+  .founder-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .founder-name {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--gold-lt);
+    margin-bottom: 8px;
+  }
+
+  .founder-role {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    color: var(--silver);
+    margin-bottom: 32px;
+    font-size: 1.05rem;
+  }
+
+  .founder-bio {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    color: var(--cream);
+    line-height: 1.9;
+  }
+
+  .founder-bio strong {
+    color: var(--gold-lt);
+    font-weight: 600;
+  }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--royal) 100%);
+    text-align: center;
+  }
+
+  .contact-email {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-dk);
+    padding-bottom: 4px;
+    transition: color 0.2s;
+    display: inline-block;
+    margin-bottom: 48px;
+  }
+
+  .contact-email:hover { color: var(--gold-lt); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid rgba(201,168,76,0.12);
+    padding: 32px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel', 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    font-size: 0.85rem;
+    color: var(--gold-dk);
+    letter-spacing: 0.2em;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(168,176,192,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', 'Palatino Linotype', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--gold-dk);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .proof-grid { grid-template-columns: 1fr; }
+    .hero-ornament { display: none; }
+    .pilot-box { padding: 36px 24px; }
+    footer { justify-content: center; text-align: center; }
+    .nav-tagline { display: none; }
+  }
+
+  @media (max-width: 480px) {
+    .cta-group { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+  }
+
+  /* ── PURPLE STARS ── */
+  .hero-stars {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle var(--d) ease-in-out var(--delay) infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+  }
+</style>
+</head>
+<body>
+
+<div class="gold-line"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">ARVEN</a>
+  <span class="nav-tagline">Good Just Happens</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  
+<div class="hero-stars" id="stars"></div>
+<div class="hero-ornament tl"></div>
+  <div class="hero-ornament tr"></div>
+  <div class="hero-ornament bl"></div>
+  <div class="hero-ornament br"></div>
+
+  <div class="hero-content">
+    <p class="hero-label">Kyiv, Ukraine · Est. 2026</p>
+    <h1 class="hero-title">ARVEN<br>AI Agency</h1>
+    <p class="hero-subtitle">Autonomous Systems for Business</p>
+    <div class="hero-divider"></div>
+    <p class="hero-proof">
+      We proved it: an AI agent wrote a <span>68-chapter book</span>.<br>
+      <span>54 runs. Zero stops. Zero human intervention.</span><br>
+      This is not automation. This is autonomy.
+    </p>
+    <div class="hero-formula">
+      WEAK + AUTONOMOUS &nbsp;›&nbsp; SMART + DEPENDENT
+    </div>
+    <div class="cta-group">
+      <a href="#pilot" class="btn-primary">Request Free Pilot</a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section">
+  <p class="section-label reveal">Proof of Concept</p>
+  <h2 class="section-title reveal">The Numbers Speak</h2>
+  <div class="gold-rule reveal"></div>
+
+  <div class="proof-grid reveal">
+    <div class="proof-card">
+      <span class="proof-number">68</span>
+      <span class="proof-desc">Chapters written autonomously</span>
+    </div>
+    <div class="proof-card">
+      <span class="proof-number">54</span>
+      <span class="proof-desc">Automated runs completed</span>
+    </div>
+    <div class="proof-card">
+      <span class="proof-number">0</span>
+      <span class="proof-desc">Human stops required</span>
+    </div>
+  </div>
+
+  <div class="proof-quote reveal">
+    The system that keeps running when no one is watching —
+    that is the system worth building.
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <p class="section-label reveal">What We Build</p>
+  <h2 class="section-title reveal">Autonomous Systems</h2>
+  <p class="section-sub reveal">Not automation. Autonomy.</p>
+  <div class="gold-rule reveal"></div>
+
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <span class="service-icon">⚡</span>
+      <p class="service-name">Sales Bot</p>
+      <p class="service-desc">Telegram & WhatsApp agents that qualify leads, answer questions and close deals — while you sleep.</p>
+      <p class="service-price">From $500 / month</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📡</span>
+      <p class="service-name">Operations Automation</p>
+      <p class="service-desc">End-to-end process automation. Your business runs itself. You make decisions.</p>
+      <p class="service-price">From $5,000 / month</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎬</span>
+      <p class="service-name">Content Pipeline</p>
+      <p class="service-desc">YouTube, social media, blog — fully automated content production without editorial overhead.</p>
+      <p class="service-price">From $400 / month</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🗄️</span>
+      <p class="service-name">VAULT — Business Memory</p>
+      <p class="service-desc">AI that knows your business as deeply as your best employee. Operational memory that compounds over time.</p>
+      <p class="service-price">Included in all plans</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔍</span>
+      <p class="service-name">Onboarding 1-4-16</p>
+      <p class="service-desc">One session. Four blocks. Sixteen questions. A complete AI system built for your specific business.</p>
+      <p class="service-price">From $2,500 one-time</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🛡️</span>
+      <p class="service-name">Security Audit</p>
+      <p class="service-desc">AI-powered security assessment of your digital infrastructure. Vulnerabilities found before attackers do.</p>
+      <p class="service-price">From $200</p>
+    </div>
+  </div>
+</section>
+
+<!-- FREE PILOT -->
+<section class="pilot-section" id="pilot">
+  <div class="pilot-box reveal">
+    <h2 class="pilot-title">Free Pilot Program</h2>
+    <p class="pilot-desc">
+      We are currently selecting 2 businesses for a completely free pilot.<br>
+      We build. You test. You decide.
+    </p>
+    <ul class="pilot-list">
+      <li>Custom AI agent built for your specific process</li>
+      <li>2 weeks of live operation in your business</li>
+      <li>Full report: results, ROI, next steps</li>
+      <li>No payment. No obligation. No catch.</li>
+    </ul>
+    <a href="/cdn-cgi/l/email-protection#ed8588818182ad8c9f9b888389c38482d29e988f87888e99d0ab9f8888cdbd84818299cdbf889c98889e99" class="btn-primary">
+      Apply for Free Pilot
+    </a>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder-section">
+  <div class="founder-inner">
+    <p class="section-label reveal">The Founder</p>
+    <div class="gold-rule reveal"></div>
+    <h3 class="founder-name reveal">Eduard Arbitman</h3>
+    <p class="founder-role reveal">Founder & CEO, ARVEN AI Agency</p>
+    <p class="founder-bio reveal">
+      <strong>35+ years in business.</strong> Medical logistics in the USA.
+      Industrial technology. Fine Particle Technologies LLC, Illinois.<br><br>
+      Building from <strong>Kyiv, Ukraine</strong> — because the best time
+      to build something that outlasts a war is during the war.<br><br>
+      The proof: an autonomous AI system that wrote a full book
+      without a single human intervention. <strong>68 chapters.
+      54 runs. Zero stops.</strong> That's not a demo. That's a system.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <p class="section-label reveal">Get in Touch</p>
+  <h2 class="section-title reveal">Let's Build Together</h2>
+  <div class="gold-rule reveal"></div>
+  <a href="/cdn-cgi/l/email-protection#82eae7eeeeedc2e3f0f4e7ece6acebed" class="contact-email reveal"><span class="__cf_email__" data-cfemail="69010c05050629081b1f0c070d470006">[email&#160;protected]</span></a>
+  <br>
+  <a href="/cdn-cgi/l/email-protection#fc9499909093bc9d8e8a999298d29593c38f899e96999f88c1ba8e9999dcac95909388dcae998d89998f88" class="btn-primary reveal">
+    Request Free Pilot
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">ARVEN AI AGENCY</span>
+  <span class="footer-tagline">Good Just Happens</span>
+  <span class="footer-copy">© 2026 · Kyiv, Ukraine · arvend.io</span>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+  // Generate stars
+  const starsContainer = document.getElementById('stars');
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.cssText = `
+      left: ${Math.random()*100}%;
+      top: ${Math.random()*100}%;
+      --d: ${2 + Math.random()*4}s;
+      --delay: ${Math.random()*4}s;
+      width: ${Math.random() > 0.8 ? 3 : 2}px;
+      height: ${Math.random() > 0.8 ? 3 : 2}px;
+    `;
+    starsContainer.appendChild(star);
+  }
+
+</script><script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.r
