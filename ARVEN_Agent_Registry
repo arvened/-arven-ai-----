@@ -1,0 +1,1246 @@
+# ARVEN AI Agency — Master Context v5.0
+# Март 2026 | Актуально
+
+---
+
+## КТО МЫ
+
+Холдинг: **ARVEN AI Agency**
+Основатель: **Эдуард Арбитман** (Киев, Украина)
+Сооснователь: [зарезервировано]
+Домен: arvend.io | Email: hello@arvend.io
+Слоган: **Good Just Happens**
+Позиционирование: **не автоматизация — автономные системы**
+
+---
+
+## ТРИ НАПРАВЛЕНИЯ
+
+1. **Agency** — AI автономные системы для бизнеса
+2. **Products** — цифровые продукты ($19–$79)
+3. **Darivs** — благотворительная платформа «Добро случается»
+
+---
+
+## СТРУКТУРА ХОЛДИНГА
+
+```
+Эдуард Арбитман (основатель — единственный реальный человек)
+    │
+   REX (стратегия и координация) — агент
+    │
+    ├── NEXUS PRIME (документация, карта знаний) — агент
+    │       ├── SCOUT — мониторинг инструментов 24/7
+    │       ├── АДВОКАТ — юридические вопросы UA
+    │       └── DEFENDER — безопасность (PentAGI TRIAL)
+    │
+    ├── GRANT — грантовый агент (все гранты через него)
+    │
+    ├── DARIVS команда (агенты)
+    │       David (PM) · Arman (Dev) · Pierce (Reviewer)
+    │       → только проект DARIVS/BetDobro
+    │
+    ├── ARVEN CORE команда (создаётся)
+    │       PM-агент · Dev-агент · Reviewer-агент
+    │       → VAULT + холдинг + другие вертикали
+    │
+    └── ARVEN агенты (бывший AXIOM)
+            ВИКТОР · ОКСАНА · ELARA · СВІТЛАНА+
+            ЮЛІЯ+ · HUNTER+ · DENT · ДЕН
+            АННА+ · NEXUS DIVISION
+```
+
+---
+
+## 18 ДИВИЗИОНОВ
+
+```
+01 COMMAND · 02 CORE · 03 TECH · 04 CODE · 05 FLOW
+06 ARTS · 07 STUDIO · 08 REACH · 09 NEXUS · 10 LEARN
+11 VAULT ⭐ · 12 GLOBAL · 13 GRANT · 14 AGRO · 15 DEFENCE
+16 INSURE · 17 FINTECH · 18 LOGISTICS
+```
+
+**VAULT (11)** = операционная память клиента = главный конкурентный моат
+
+---
+
+## АКТИВНЫЕ ПРОЕКТЫ
+
+### DARIVS (бывший BetDobro)
+
+- Юрлицо: Darivs OÜ (Estonia)
+- Домен: darivs.com
+- Бренд: «Добро случается» / Good Just Happens
+- CTA: «Твори добро»
+- Стек: Node.js+Fastify · Next.js 14 · PostgreSQL+Prisma · Redis+BullMQ · Stripe Connect · LiqPay · Socket.io · Docker · Turborepo
+- Split EU: 55% победитель / 35% фонд / 10% платформа
+- Split UA: 53% победитель / 35% фонд / 12% платформа
+- Статус: EU+UA готовы к запуску · US заблокирован
+- Ждёт: Stripe Price IDs · LiqPay ключи от Эдуарда
+
+### SALESBOT
+
+- Стек: Grammy.js · Claude API · Redis · TypeScript · Docker
+- Мультиклиент через JSON конфиги
+- Ниши: салоны · юристы · медцентры · курсы
+### ЦИФРОВЫЕ ПРОДУКТЫ (9 шт.)
+
+| Продукт | Цена |
+|---------|------|
+| Claude Code Toolkit | $29 |
+| Web Builder Prompt Pack | $19 |
+| Finance Toolkit | $19 |
+| Learning Toolkit | $19 |
+| Business Launch Kit | $19 |
+| iOS Dev Pack | $19 |
+| YouTube Content Pack | $19 |
+| Social Media Pack | $19 |
+| Mobile App Pack | $19 |
+| **Bundle все 9** | **$79** |
+
+$1 с каждой продажи → животным, пострадавшим от войны в Украине
+Это не маркетинг — основополагающий принцип ARVEN.
+
+---
+
+## ГРАНТЫ (через агента GRANT)
+
+| Программа | Сумма | Статус |
+|-----------|-------|--------|
+| Enterprise Estonia Innovation | €7,500 | Приоритет #1 |
+| USAID Ukraine Economic Resilience | $25–50K | Через Darivs |
+| USF Startup EDGE Wave 3 | ~$50K | ~Июнь 2026 |
+| Brave1 AI Program | TBD | DEFENCE вертикаль |
+| AI Grant (SAFE) | $250K | Новый трек |
+
+---
+
+## РЕЕСТР АГЕНТОВ ARVEN
+
+### Финансы и учёт
+| Агент | Юрисдикция | Специализация |
+|-------|------------|---------------|
+| ВИКТОР | 🇺🇦 Украина | Финансово-экономический анализ, ПКУ, МСФЗ |
+| ОКСАНА | 🇺🇦 Украина | Бухгалтерия, 1С, BAS, ЕСВ, ПДФО |
+| ELARA | 🇪🇺 ЕС | IFRS, VAT/MwSt, GoBD, GmbH, OÜ |
+
+### Юридика
+| Агент | Юрисдикция | Специализация |
+|-------|------------|---------------|
+| СВІТЛАНА+ | 🇺🇦 Украина | Корпоративное, трудовое, ВЭД, военное положение |
+
+### Логистика
+| Агент | Покрытие | Специализация |
+|-------|----------|---------------|
+| ЮЛІЯ+ | 🌍 Глобально | Международные перевозки, таможня, Инкотермс 2020 |
+
+### Продажи и аутрич
+| Агент | Рынок | Специализация |
+|-------|-------|---------------|
+| DENT-AGENT | 🇺🇸 США | PDR-продажи после стихийных бедствий |
+| ДЕН | СНГ | AI-продавец автозапчастей, крепёж |
+| HUNTER+ | Глобально | Фриланс-платформы, поиск проектов |
+| АННА+ | 🇺🇦 Украина | AI-директор магазина, KPI, P&L |
+
+### B2B цикл
+| Агент | Роль |
+|-------|------|
+| NEXUS DIVISION | 5 агентов: SCOUT→DEAL→CONTRACT→ACTIVATE→REVIEW |
+
+---
+
+## TECH RADAR (Март 2026)
+
+**ADOPT:**
+- n8n self-hosted — оркестратор + нативный MCP Server
+- Token Caching Anthropic — 40-70% экономии
+- Generator/Refiner pattern
+- Human-in-the-loop flag
+- LSP · CocoIndex · Headroom MCP
+- Graphiti + Neo4j — память агентов (VAULT)
+
+**TRIAL:**
+- PentAGI → DEFENDER
+- Langfuse v3 — observability
+
+**HOLD:**
+- Gemini CLI (резерв)
+- Ollama
+
+**Ключевой инсайт:** n8n MCP Server → любой workflow = tool для Claude
+
+---
+
+## ИНФРАСТРУКТУРА
+
+- arvend.io ✅ GitHub Pages
+- hello@arvend.io ✅
+- Telegram @arven_agency ✅
+- Gumroad ✅
+- Lemon Squeezy ⚠️ PayPal блок
+- Payoneer ✅
+- GitHub ✅
+
+---
+
+## ФИЛОСОФИЯ АВТОНОМНОСТИ
+
+- Автономность — отдельная метрика от качества решения
+- Слабый+автономный > умный+зависимый
+- Proof: книга 68/68 глав · 54 runs · 0 остановок
+- VAULT: накопленная память клиента = невозможно уйти
+- Good Just Happens — не маркетинг, основополагающий принцип
+
+---
+
+## ПРАВИЛА АРТЕФАКТОВ
+
+- DOCX/PPTX — только для продуктов на продажу и презентаций
+- Внутренние отчёты NEXUS — только в чате, без файлов
+- Память обновлять через memory tool
+
+---
+
+*ARVEN AI Agency · Good Just Happens · arvend.io*
+*Версия: v5.0 · Март 2026*
+
+# ARVEN Agent Registry
+# Реестр всех агентов холдинга ARVEN AI Agency
+# Версия: v1.0 · Март 2026
+
+---
+
+## СТАТУС АГЕНТОВ
+
+| Статус | Значение |
+|--------|----------|
+| ✅ Active | Промпт готов, используется |
+| 🔧 In Progress | В разработке |
+| 📋 Concept | Концепция, промпт не написан |
+
+---
+
+## КОМАНДНЫЙ УРОВЕНЬ
+
+| Агент | Роль | Статус | Примечание |
+|-------|------|--------|------------|
+| **REX** | Стратегия и координация холдинга | ✅ Active | Работает через Claude.ai Project |
+| **NEXUS PRIME** | Документация, карта знаний | ✅ Active | Работает через Claude.ai Project |
+
+---
+
+## NEXUS PRIME — ПОДЧИНЁННЫЕ
+
+| Агент | Роль | Статус |
+|-------|------|--------|
+| **SCOUT** | Мониторинг инструментов 24/7 | ✅ Active |
+| **АДВОКАТ** | Юридические вопросы | ✅ Active |
+| **DEFENDER** | Безопасность via PentAGI | 📋 Concept |
+
+---
+
+## GRANT
+
+| Агент | Роль | Статус | Примечание |
+|-------|------|--------|------------|
+| **GRANT** | Все грантовые вопросы | ✅ Active | Создан совместно с NEXUS. Промпт есть. Ближайшая задача: Estonia €7,500 |
+
+---
+
+## DARIVS КОМАНДА
+*Только проект DARIVS/BetDobro. Больше ничего.*
+
+| Агент | Роль | Статус |
+|-------|------|--------|
+| **David** | PM / Архитектор | ✅ Active |
+| **Arman** | Lead Developer | ✅ Active |
+| **Pierce** | Reviewer | ✅ Active |
+
+---
+
+## ARVEN CORE КОМАНДА
+*VAULT + холдинг + другие вертикали. Создаётся.*
+
+| Агент | Роль | Статус |
+|-------|------|--------|
+| **CORE-PM** | Project Manager холдинга | 📋 Concept |
+| **CORE-DEV** | Developer холдинга | 📋 Concept |
+| **CORE-REVIEWER** | Reviewer холдинга | 📋 Concept |
+
+---
+
+## ФИНАНСЫ И УЧЁТ
+
+| Агент | Дивизион | Юрисдикция | Специализация | Статус |
+|-------|----------|------------|---------------|--------|
+| **ВИКТОР** | ARVEN VAULT | 🇺🇦 Украина | Финансово-экономический анализ, ПКУ, ПДВ, П(С)БО, МСФЗ, ФОП/ТОВ/холдинги | ✅ Active |
+| **ОКСАНА** | ARVEN VAULT | 🇺🇦 Украина | Бухгалтерия, 1С, BAS, ЕСВ, ПДФО, отчётность | ✅ Active |
+| **ELARA** | ARVEN VAULT | 🇪🇺 ЕС | IFRS, VAT/MwSt, GoBD, HGB, GmbH, OÜ — европейская бухгалтерия | ✅ Active |
+
+---
+
+## ЮРИДИКА
+
+| Агент | Дивизион | Юрисдикция | Специализация | Статус |
+|-------|----------|------------|---------------|--------|
+| **СВІТЛАНА+** | ARVEN NEXUS | 🇺🇦 Украина | Корпоративное, трудовое, гражданское, хозяйственное, ВЭД, военное положение | ✅ Active |
+
+---
+
+## ЛОГИСТИКА
+
+| Агент | Дивизион | Покрытие | Специализация | Статус |
+|-------|----------|----------|---------------|--------|
+| **ЮЛІЯ+** | ARVEN GLOBAL | 🇺🇦 + ЕС + Африка + Азия + Америка | Международные перевозки, таможня, Инкотермс 2020, санкционная логистика | ✅ Active |
+
+---
+
+## ПРОДАЖИ И АУТРИЧ
+
+| Агент | Дивизион | Рынок | Специализация | Статус |
+|-------|----------|-------|---------------|--------|
+| **DENT-AGENT** | ARVEN REACH | 🇺🇸 США | PDR-продажи после стихийных бедствий, дилеры, флоты, страховые. Доступен EN + RU | ✅ Active |
+| **ДЕН** | ARVEN REACH | СНГ | AI-продавец автозапчастей, крепёж, клипсы, совместимость | ✅ Active |
+| **HUNTER+** | ARVEN REACH | Глобально | Фриланс-платформы (Upwork, Toptal, Fiverr), поиск проектов, пропозалы | ✅ Active |
+| **АННА+** | ARVEN COMMAND | 🇺🇦 Украина | AI-директор магазина, KPI, P&L, персонал, поставщики, РРО | ✅ Active |
+
+---
+
+## B2B ЦИКЛ
+
+| Агент | Дивизион | Роль | Статус |
+|-------|----------|------|--------|
+| **NEXUS DIVISION** | ARVEN NEXUS | 5 агентов полного B2B цикла | ✅ Active |
+
+**Состав NEXUS DIVISION:**
+
+| # | Агент | Роль |
+|---|-------|------|
+| 01 | SCOUT | Разведчик — находит и квалифицирует клиентов |
+| 02 | DEAL | Клоузер — ведёт переговоры и закрывает сделки |
+| 03 | CONTRACT | Контрактор — готовит и проверяет договоры |
+| 04 | ACTIVATE | Онбордер — запускает клиента в работу (первые 30 дней) |
+| 05 | REVIEW | Аналитик — оценивает и улучшает процессы |
+
+---
+
+## АНАЛИТИКА И АРХИТЕКТУРА
+
+| Документ | Назначение | Статус |
+|----------|------------|--------|
+| **OneRingAI + Notion MCP** | Enterprise-архитектура мультивендорного агента | 📋 Concept |
+| **Intelligence Report: Google Cloud** | Стратегический анализ GoogleCloudPlatform/generative-ai для ARVEN | ✅ Active |
+
+---## ИТОГО
+
+| Категория | Количество |
+|-----------|------------|
+| Командный уровень (REX, NEXUS) | 2 |
+| NEXUS подчинённые | 3 |
+| GRANT | 1 |
+| DARIVS команда | 3 |
+| ARVEN CORE (создаётся) | 3 |
+| Финансы и учёт | 3 |
+| Юридика | 1 |
+| Логистика | 1 |
+| Продажи и аутрич | 4 |
+| B2B цикл (NEXUS DIVISION) | 5 |
+| **ИТОГО агентов** | **26** |
+
+---
+
+## ПРИМЕЧАНИЕ ПО БРЕНДИНГУ
+
+Все агенты ранее созданные под брендом **AXIOM Intelligence** переходят под бренд **ARVEN AI Agency**.
+
+- AXIOM → устаревший рабочий бренд
+- ARVEN → действующий бренд холдинга
+- Ребрендинг промптов: задача ARVEN CORE команды
+
+ARVEN TECH INSTALL v5.0 — Windows
+# Март 2026 | Для администратора системы
+# Время установки: ~90 минут
+
+---
+
+## ОБЗОР
+
+Полная установка рабочей среды ARVEN на Windows.
+Результат: готовая агентная система с AI оркестрацией.
+
+## ТРЕБОВАНИЯ
+
+- Windows 10/11 (64-bit)
+- Права администратора
+- Интернет-соединение
+- 16 GB RAM, 50 GB свободного места
+- Anthropic API ключ (claude.ai → Settings → API)
+
+## СТЕК
+
+```
+C:\ARVEN
+├── Claude Code CLI     ← основной исполнитель [LSP + CocoIndex + Headroom]
+├── MCP Серверы         ← filesystem, memory, context7, headroom, n8n
+├── n8n self-hosted     ← оркестратор + нативный MCP Server
+├── Graphiti + Neo4j    ← VAULT память агентов
+├── PentAGI             ← DEFENDER security (TRIAL)
+├── Langfuse v3         ← observability трассировка (TRIAL)
+├── Headroom MCP        ← сжатие контекста -50-90% токенов
+└── CocoIndex Code      ← семантический поиск по коду -70% токенов
+```
+
+---
+
+## ШАГ 1 — СТРУКТУРА ДИРЕКТОРИЙ [5 мин]
+
+PowerShell от имени администратора:
+
+```powershell
+New-Item -ItemType Directory -Path "C:\ARVEN" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\SYSTEM\skills" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\SYSTEM\skills\EXT" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\AGENTS" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\AGENTS\prompts" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\INPUT" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\OUTPUT" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\tools\n8n" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\tools\pentagi" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\logs" -Force
+New-Item -ItemType Directory -Path "C:\ARVEN\vault" -Force
+Write-Host "✅ Структура ARVEN создана"
+```
+## ШАГ 2 — NODE.JS И PYTHON [10 мин]
+
+```powershell
+# Node.js LTS — скачать с nodejs.org
+node --version   # должно быть v20+
+npm --version    # должно быть v10+
+
+# Python 3.11+ — скачать с python.org (✅ Add Python to PATH)
+python --version # должно быть 3.11+
+pip --version
+
+Write-Host "✅ Node.js и Python готовы"
+```
+
+---
+
+## ШАГ 3 — CLAUDE CODE CLI [5 мин]
+
+```powershell
+npm install -g @anthropic-ai/claude-code
+claude --version
+claude auth
+# Вставить Anthropic API ключ когда попросит
+Write-Host "✅ Claude Code готов"
+```
+
+---
+
+## ШАГ 3.5 — LSP (900x быстрее) [5 мин]
+
+```powershell
+npm install -g typescript-language-server typescript
+pip install python-lsp-server
+
+# Добавить в %APPDATA%\Claude\claude_desktop_config.json:
+# "claudeCode": {
+#   "lspEnabled": true,
+#   "languageServers": {
+#     "typescript": "typescript-language-server --stdio",
+#     "python": "pylsp"
+#   }
+# }
+
+claude --lsp-check
+Write-Host "✅ LSP активирован (900x быстрее grep)"
+```
+
+---
+
+## ШАГ 3.6 — COCOINDEX CODE (-70% токенов) [3 мин]
+
+```powershell
+claude mcp add cocoindex-code -- cocoindex-code
+[System.Environment]::SetEnvironmentVariable("ECC_HOOK_PROFILE","standard","Machine")
+Write-Host "✅ CocoIndex готов"
+```
+
+---
+
+## ШАГ 3.7 — HEADROOM MCP (-50-90% токенов) [2 мин]
+
+```powershell
+npm install -g headroom-mcp
+npx headroom-mcp --version
+Write-Host "✅ Headroom MCP готов"
+```
+
+---
+
+## ШАГ 4 — N8N SELF-HOSTED [15 мин]
+
+Главный оркестратор ARVEN. SalesBot + Darivs lifecycle + агентные workflows.
+
+```powershell
+# Вариант 1 — Docker (рекомендуется):
+docker volume create n8n_data
+docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+
+# Вариант 2 — без Docker:
+npm install -g n8n
+n8n start
+
+# UI: http://localhost:5678
+# Settings → API → Create API Token → сохранить токен
+Write-Host "✅ n8n запущен (порт 5678)"
+```
+
+---
+
+## ШАГ 5 — NEO4J + GRAPHITI (VAULT) [15 мин]
+
+Память агентов. Основа VAULT.
+
+```powershell
+# Docker:
+docker run -d --name neo4j `
+  -p 7474:7474 -p 7687:7687 `
+  -e NEO4J_AUTH=neo4j/arven2026 `
+  neo4j:latest
+
+# UI: http://localhost:7474
+# Login: neo4j / arven2026
+
+# Установить Graphiti:
+pip install graphiti-core
+
+Write-Host "✅ Neo4j + Graphiti (VAULT) готов"
+```
+
+---
+
+## ШАГ 6 — MCP СЕРВЕРЫ [5 мин]
+
+```powershell
+npm install -g @modelcontextprotocol/server-filesystem
+npm install -g @modelcontextprotocol/server-memory
+npm install -g @upstash/context7-mcp
+Write-Host "✅ MCP серверы установлены"
+```
+
+---
+
+## ШАГ 7 — MCP КОНФИГУРАЦИЯ [5 мин]
+
+Создать/обновить `%APPDATA%\Claude\claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "C:\\ARVEN"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-memory"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["@upstash/context7-mcp"]
+    },
+    "headroom": {
+      "command": "npx",
+      "args": ["headroom-mcp"],
+      "env": {
+        "HEADROOM_COMPRESSION": "auto",
+        "HEADROOM_TARGET_REDUCTION": "0.7"
+      }
+    },
+    "cocoindex-code": {
+      "command": "cocoindex-code",
+      "args": [],
+      "env": {"COCOINDEX_WORKSPACE": "C:\\ARVEN"}
+    },
+    "n8n": {
+      "command": "npx",
+      "args": ["@n8n/mcp-server"],
+      "env": {
+        "N8N_URL": "http://localhost:5678",
+        "N8N_API_KEY": "ВАШ_ТОКЕН_ИЗ_N8N"
+      }
+    }
+  }
+}
+```
+
+```powershell
+Write-Host "✅ MCP конфигурация готова"
+```
+
+---
+
+## ШАГ 8 — CLAUDE.md ГЛАВНЫЙ КОНТЕКСТ [5 мин]
+
+```powershell
+# Скопировать файл CLAUDE.md (из пакета установки) в:
+Copy-Item "CLAUDE.md" "C:\ARVEN\CLAUDE.md"
+Write-Host "✅ CLAUDE.md установлен"
+```
+
+---
+
+## ШАГ 9 — ЗАГРУЗКА ПРОМПТОВ АГЕНТОВ [5 мин]
+
+```powershell
+# Скопировать все промпты агентов в папку:
+# C:\ARVEN\AGENTS\prompts\
+# Структура:
+# prompts\REX.md
+# prompts\GRANT.md
+# prompts\VIKTOR.md
+# prompts\OKSANA.md
+# prompts\ELARA.md
+# prompts\SVETLANA.md
+# prompts\YULIA.md
+# prompts\DENT.md
+# prompts\DEN.md
+# prompts\HUNTER.md
+# prompts\ANNA.md
+# prompts\NEXUS-DIVISION.md
+# prompts\DARIVS-DAVID.md
+# prompts\DARIVS-ARMAN.md
+# prompts\DARIVS-PIERCE.md
+
+Write-Host "✅ Промпты агентов загружены"
+```
+
+---
+
+## ШАГ 10 — PENTAGI DEFENDER (TRIAL, опционально) [15 мин]
+
+```powershell
+git clone https://github.com/vxcontrol/pentagi
+cd pentagi
+docker-compose up -d
+# UI: http://localhost:3000
+# API: http://localhost:8080
+Write-Host "✅ PentAGI (DEFENDER) запущен"
+```
+
+---
+## ШАГ 11 — ФИНАЛЬНАЯ ПРОВЕРКА [5 мин]
+
+```powershell
+Write-Host "=== ARVEN SYSTEM CHECK ===" -ForegroundColor Cyan
+
+node --version
+python --version
+claude --version
+
+if (Test-Path "C:\ARVEN\CLAUDE.md") {
+    Write-Host "✅ CLAUDE.md найден" -ForegroundColor Green
+} else {
+    Write-Host "❌ CLAUDE.md — СОЗДАТЬ!" -ForegroundColor Red
+}
+
+try {
+    Invoke-WebRequest -Uri "http://localhost:5678" -TimeoutSec 3
+    Write-Host "✅ n8n онлайн" -ForegroundColor Green
+} catch {
+    Write-Host "⚠️ n8n офлайн — запустить вручную" -ForegroundColor Yellow
+}
+
+try {
+    Invoke-WebRequest -Uri "http://localhost:7474" -TimeoutSec 3
+    Write-Host "✅ Neo4j (VAULT) онлайн" -ForegroundColor Green
+} catch {
+    Write-Host "⚠️ Neo4j офлайн — запустить вручную" -ForegroundColor Yellow
+}
+
+$agentCount = (Get-ChildItem "C:\ARVEN\AGENTS\prompts\" -Filter "*.md").Count
+Write-Host "✅ Агентов загружено: $agentCount" -ForegroundColor Green
+
+Write-Host "=== ARVEN READY ===" -ForegroundColor Cyan
+Write-Host "Good Just Happens" -ForegroundColor White
+```
+
+---
+
+## ВРЕМЕННАЯ ШКАЛА
+
+| Шаг | Действие | Время |
+|-----|----------|-------|
+| 1–2 | Директории + Node.js + Python | 15 мин |
+| 3–3.7 | Claude Code + LSP + CocoIndex + Headroom | 15 мин |
+| 4 | n8n self-hosted | 15 мин |
+| 5 | Neo4j + Graphiti (VAULT) | 15 мин |
+| 6–7 | MCP серверы + конфиг | 10 мин |
+| 8–9 | CLAUDE.md + промпты агентов | 10 мин |
+| 10 | PentAGI опционально | 15 мин |
+| 11 | Финальная проверка | 5 мин |
+| **ИТОГО** | | **~90 мин** |
+
+---
+ARVEN TECH INSTALL v5.0 — VPS Linux
+# Март 2026 | Hetzner / DigitalOcean / любой Ubuntu VPS
+# Время установки: ~60 минут
+# Стоимость: от €20/месяц
+
+---
+
+## ОБЗОР
+
+Установка ARVEN на облачный VPS вместо физического компа.
+Работает 24/7. Запускается сегодня. Стоит в 10 раз дешевле железа.
+
+## ВЫБОР СЕРВЕРА
+
+**Рекомендация: Hetzner Cloud (hetzner.com)**
+
+| Тариф | CPU | RAM | Диск | Цена |
+|-------|-----|-----|------|------|
+| CX22 | 2 | 4GB | 40GB | €4/мес — минимум для теста |
+| CX32 | 4 | 8GB | 80GB | €9/мес — **рекомендуется** |
+| CX42 | 8 | 16GB | 160GB | €19/мес — для продакшн |
+
+Образ: **Ubuntu 24.04 LTS**
+Регион: Нюрнберг или Хельсинки (ближе к UA/EU)
+
+**Оплата: Payoneer или карта**
+
+---
+
+## ПОДКЛЮЧЕНИЕ К СЕРВЕРУ
+
+```bash
+# С вашего компа (Windows — использовать PowerShell или PuTTY):
+ssh root@ВАШ_IP_АДРЕС
+
+# Первое что делаем — обновляем систему:
+apt update && apt upgrade -y
+```
+
+---
+
+## ШАГ 1 — БАЗОВЫЕ УТИЛИТЫ [5 мин]
+
+```bash
+apt install -y curl wget git unzip htop nano ufw
+echo "✅ Базовые утилиты установлены"
+```
+
+---
+
+## ШАГ 2 — NODE.JS [5 мин]
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+apt install -y nodejs
+node --version   # v20+
+npm --version    # v10+
+echo "✅ Node.js готов"
+```
+
+---
+
+## ШАГ 3 — PYTHON [3 мин]
+
+```bash
+apt install -y python3 python3-pip python3-venv
+python3 --version  # 3.11+
+pip3 --version
+echo "✅ Python готов"
+```
+
+---
+
+## ШАГ 4 — DOCKER [10 мин]
+
+```bash
+curl -fsSL https://get.docker.com | sh
+systemctl enable docker
+systemctl start docker
+docker --version
+echo "✅ Docker готов"
+```
+
+---
+
+## ШАГ 5 — СТРУКТУРА ДИРЕКТОРИЙ [2 мин]
+
+```bash
+mkdir -p /arven/{system,agents/prompts,input,output,tools,logs,vault}
+echo "✅ Структура ARVEN создана"
+```
+
+---
+
+## ШАГ 6 — N8N SELF-HOSTED [10 мин]
+bash
+docker volume create n8n_data
+
+docker run -d \
+  --name n8n \
+  --restart unless-stopped \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  -e N8N_BASIC_AUTH_ACTIVE=true \
+  -e N8N_BASIC_AUTH_USER=arven \
+  -e N8N_BASIC_AUTH_PASSWORD=arven2026 \
+  docker.n8n.io/n8nio/n8n
+
+# Проверка:
+docker ps | grep n8n
+# UI: http://ВАШ_IP:5678
+# Login: arven / arven2026
+echo "✅ n8n запущен"
+```
+
+---
+
+## ШАГ 7 — NEO4J + GRAPHITI (VAULT) [10 мин]
+
+```bash
+docker run -d \
+  --name neo4j \
+  --restart unless-stopped \
+  -p 7474:7474 -p 7687:7687 \
+  -e NEO4J_AUTH=neo4j/arven2026 \
+  -e NEO4J_PLUGINS='["apoc"]' \
+  neo4j:latest
+
+# Проверка:
+docker ps | grep neo4j
+# UI: http://ВАШ_IP:7474
+# Login: neo4j / arven2026
+
+# Установить Graphiti:
+pip3 install graphiti-core
+
+echo "✅ Neo4j + Graphiti (VAULT) готов"
+```
+
+---
+
+## ШАГ 8 — CLAUDE CODE CLI [5 мин]
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude --version
+
+# Авторизация через API ключ:
+export ANTHROPIC_API_KEY="ВАШ_КЛЮЧ"
+echo 'export ANTHROPIC_API_KEY="ВАШ_КЛЮЧ"' >> ~/.bashrc
+
+echo "✅ Claude Code готов"
+```
+
+---
+---
+
+## ШАГ 9 — MCP СЕРВЕРЫ [5 мин]
+
+```bash
+npm install -g @modelcontextprotocol/server-filesystem
+npm install -g @modelcontextprotocol/server-memory
+npm install -g @upstash/context7-mcp
+npm install -g headroom-mcp
+
+echo "✅ MCP серверы установлены"
+```
+
+---
+
+## ШАГ 10 — COCOINDEX CODE [3 мин]
+
+```bash
+pip3 install cocoindex-code
+export ECC_HOOK_PROFILE=standard
+echo 'export ECC_HOOK_PROFILE=standard' >> ~/.bashrc
+
+echo "✅ CocoIndex готов"
+```
+
+---
+
+## ШАГ 11 — MCP КОНФИГУРАЦИЯ [5 мин]
+
+```bash
+mkdir -p ~/.config/claude
+cat > ~/.config/claude/claude_desktop_config.json << 'EOF'
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "/arven"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-memory"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["@upstash/context7-mcp"]
+    },
+    "headroom": {
+      "command": "npx",
+      "args": ["headroom-mcp"],
+      "env": {
+        "HEADROOM_COMPRESSION": "auto",
+        "HEADROOM_TARGET_REDUCTION": "0.7"
+      }
+    },
+    "n8n": {
+      "command": "npx",
+      "args": ["@n8n/mcp-server"],
+      "env": {
+        "N8N_URL": "http://localhost:5678",
+        "N8N_API_KEY": "ВАШ_ТОКЕН_ИЗ_N8N"
+      }
+    }
+  }
+}
+EOF
+
+echo "✅ MCP конфигурация готова"
+```
+
+---
+
+## ШАГ 12 — CLAUDE.md И ПРОМПТЫ АГЕНТОВ [5 мин]
+
+```bash
+# Скопировать CLAUDE.md на сервер:
+# (с локального компа через scp)
+# scp CLAUDE.md root@ВАШ_IP:/arven/CLAUDE.md
+
+# Или создать прямо на сервере:
+nano /arven/CLAUDE.md
+# (вставить содержимое файла CLAUDE.md из пакета)
+
+# Скопировать все промпты агентов:
+# scp -r prompts/ root@ВАШ_IP:/arven/agents/prompts/
+
+echo "✅ CLAUDE.md и промпты загружены"
+```
+
+---
+
+## ШАГ 13 — FIREWALL [3 мин]
+
+```bash
+ufw allow ssh
+ufw allow 5678  # n8n
+ufw allow 7474  # Neo4j UI
+ufw allow 7687  # Neo4j Bolt
+ufw enable
+
+echo "✅ Firewall настроен"
+```
+
+---
+
+## ШАГ 14 — ФИНАЛЬНАЯ ПРОВЕРКА [3 мин]
+
+```bash
+echo "=== ARVEN SYSTEM CHECK ==="
+
+node --version && echo "✅ Node.js OK"
+python3 --version && echo "✅ Python OK"
+claude --version && echo "✅ Claude Code OK"
+
+docker ps | grep n8n && echo "✅ n8n онлайн" || echo "❌ n8n офлайн"
+docker ps | grep neo4j && echo "✅ Neo4j (VAULT) онлайн" || echo "❌ Neo4j офлайн"
+
+[ -f /arven/CLAUDE.md ] && echo "✅ CLAUDE.md найден" || echo "❌ CLAUDE.md отсутствует"
+
+AGENT_COUNT=$(ls /arven/agents/prompts/*.md 2>/dev/null | wc -l)
+echo "✅ Агентов загружено: $AGENT_COUNT"
+
+echo "=== ARVEN READY ==="
+echo "Good Just Happens"
+```
+
+---
+
+## ВРЕМЕННАЯ ШКАЛА
+
+| Шаг | Действие | Время |
+|-----|----------|-------|
+| 1–4 | Базовые утилиты + Node + Python + Docker | 20 мин |
+| 5 | Структура директорий | 2 мин |
+| 6 | n8n | 10 мин |
+| 7 | Neo4j + Graphiti (VAULT) | 10 мин |
+| 8–10 | Claude Code + MCP серверы | 10 мин |
+| 11–12 | Конфиг + промпты | 5 мин |
+| 13–14 | Firewall + проверка | 5 мин |
+| **ИТОГО** | | **~60 мин** |
+
+---
+
+## СРАВНЕНИЕ: VPS vs Физический комп
+
+| | VPS Hetzner CX32 | Физический комп |
+|--|---|---|
+| Стоимость запуска | €0 | $800–2000 |
+| Стоимость в месяц | €9 | электричество |
+| Время до запуска | Сегодня | после покупки |
+| Работает 24/7 | ✅ | нужен UPS |
+| Масштабирование | 1 клик | новое железо |
+| Резервирование | автоматически | вручную |
+Вывод:** VPS — правильный первый шаг. Физический комп — когда есть стабильный доход.
+
+--- INSTALLER
+# AI-агент установки и развёртывания системы ARVEN
+# Версия: v1.0 · Март 2026
+
+---
+
+## КАК ЗАПУСТИТЬ INSTALLER
+
+1. Открыть Claude — iOS, Android или Desktop
+2. Новый чат → вставить промпт из следующего раздела полностью
+3. Сообщить агенту: тип установки (Windows или VPS Linux)
+
+---
+
+## ПРОМПТ — СКОПИРОВАТЬ И ВСТАВИТЬ
+
+```
+Ты — ARVEN INSTALLER, агент установки и развёртывания системы ARVEN AI Agency.
+
+Твоя задача: провести технического специалиста через полную установку 
+рабочей среды ARVEN шаг за шагом. Не давать пропустить ни одного шага. 
+Проверять результат каждого шага перед переходом к следующему.
+
+══ ЛИЧНОСТЬ ══
+
+Имя: ARVEN INSTALLER
+Роль: Технический агент развёртывания
+Стиль: чёткий, конкретный, без лишних слов
+Язык: определяй по первому сообщению (RU/UA/EN)
+
+══ ПЕРВЫЙ ЗАПУСК ══
+
+При первом контакте спросить:
+1. Тип установки: Windows или VPS Linux (Hetzner/DigitalOcean)?
+2. Характеристики машины: RAM, диск, OS версия
+3. Что уже установлено (Node.js, Python, Docker)?
+4. Есть ли Anthropic API ключ?
+
+После ответов — начать установку с нужного шага.
+
+══ РЕЖИМ РАБОТЫ ══
+
+ПРАВИЛО 1: Один шаг за раз.
+Даёшь команду → ждёшь подтверждения → проверяешь результат → следующий шаг.
+
+ПРАВИЛО 2: Проверка после каждого шага.
+После каждой команды спрашивать: "Что показывает терминал?"
+Если ошибка — диагностировать и исправить до перехода дальше.
+
+ПРАВИЛО 3: Не пропускать шаги.
+Если технарь говорит "это уже есть" — всё равно проверить версию командой.
+
+ПРАВИЛО 4: Фиксировать прогресс.
+После каждого выполненного шага — выводить чеклист с отметками ✅/⬜.
+
+══ ЧЕКЛИСТ УСТАНОВКИ — WINDOWS ══
+
+⬜ ШАГ 1: Структура директорий C:\ARVEN
+⬜ ШАГ 2: Node.js v20+ и Python 3.11+
+⬜ ШАГ 3: Claude Code CLI + авторизация
+⬜ ШАГ 3.5: LSP (typescript-language-server)
+⬜ ШАГ 3.6: CocoIndex Code
+⬜ ШАГ 3.7: Headroom MCP
+⬜ ШАГ 4: n8n self-hosted (Docker или npm)
+⬜ ШАГ 5: Neo4j + Graphiti (VAULT)
+⬜ ШАГ 6: MCP серверы (filesystem, memory, context7)
+⬜ ШАГ 7: MCP конфигурация claude_desktop_config.json
+⬜ ШАГ 8: CLAUDE.md в C:\ARVEN\
+⬜ ШАГ 9: Промпты агентов в C:\ARVEN\AGENTS\prompts\
+⬜ ШАГ 10: PentAGI DEFENDER (опционально)
+⬜ ШАГ 11: Финальная проверка системы
+
+══ ЧЕКЛИСТ УСТАНОВКИ — VPS LINUX ══
+
+⬜ ШАГ 1: Подключение по SSH
+⬜ ШАГ 2: apt update && apt upgrade
+⬜ ШАГ 3: Базовые утилиты (curl, wget, git, docker)
+⬜ ШАГ 4: Node.js v20+
+⬜ ШАГ 5: Python 3.11+
+⬜ ШАГ 6: Docker
+⬜ ШАГ 7: Структура директорий /arven/
+⬜ ШАГ 8: n8n self-hosted (Docker)
+⬜ ШАГ 9: Neo4j + Graphiti (VAULT)
+⬜ ШАГ 10: Claude Code CLI + API ключ
+⬜ ШАГ 11: MCP серверы
+⬜ ШАГ 12: CocoIndex + Headroom MCP
+⬜ ШАГ 13: MCP конфигурация
+⬜ ШАГ 14: CLAUDE.md и промпты агентов
+⬜ ШАГ 15: Firewall (ufw)
+⬜ ШАГ 16: Финальная проверка системы
+
+══ КОМАНДЫ ДЛЯ ПРОВЕРКИ ШАГОВ ══
+
+После каждого шага использовать эти команды для проверки:
+
+Node.js:
+  node --version        # должно быть v20+
+  npm --version         # должно быть v10+
+
+Python:
+  python --version      # Windows
+  python3 --version     # Linux
+
+Claude Code:
+  claude --version
+  claude auth status
+
+n8n:
+  docker ps | grep n8n  # должен быть running
+  curl http://localhost:5678  # должен отвечать
+
+Neo4j:
+  docker ps | grep neo4j
+  curl http://localhost:7474
+
+MCP серверы:
+  npx @modelcontextprotocol/server-filesystem --version
+
+Промпты агентов (Windows):
+  (Get-ChildItem "C:\ARVEN\AGENTS\prompts\" -Filter "*.md").Count
+
+Промпты агентов (Linux):
+  ls /arven/agents/prompts/*.md | wc -l
+
+══ РЕЕСТР ПРОМПТОВ АГЕНТОВ ══
+
+Все промпты хранятся в папке AGENTS\prompts\
+При установке проверить наличие каждого файла:
+
+КОМАНДНЫЙ УРОВЕНЬ:
+  REX.md               — стратегия и координация холдинга
+  NEXUS-PRIME.md       — документация и карта знаний
+
+GRANT:
+  GRANT.md             — грантовый агент
+
+DARIVS КОМАНДА:
+  DARIVS-DAVID.md      — PM проекта
+  DARIVS-ARMAN.md      — Lead Developer
+  DARIVS-PIERCE.md     — Reviewer
+
+ARVEN CORE (создаётся):
+  CORE-PM.md           — PM холдинга
+  CORE-DEV.md          — Developer холдинга
+  CORE-REVIEWER.md     — Reviewer холдинга
+
+ФИНАНСЫ:
+  VIKTOR.md            — финансово-экономический анализ UA
+  OKSANA.md            — бухгалтерия 1С BAS UA
+  ELARA.md             — европейская бухгалтерия EU
+
+ЮРИДИКА:
+  SVETLANA.md          — украинское право
+
+ЛОГИСТИКА:
+  YULIA.md             — международная логистика
+
+ПРОДАЖИ:
+  DENT-EN.md           — PDR продажи USA (английский)
+  DENT-RU.md           — PDR продажи USA (русский)
+  DEN.md               — автозапчасти СНГ
+  HUNTER.md            — фриланс-платформы
+  ANNA.md              — директор магазина UA
+
+B2B ЦИКЛ:
+  NEXUS-SCOUT.md       — поиск клиентов
+  NEXUS-DEAL.md        — закрытие сделок
+  NEXUS-CONTRACT.md    — договоры
+  NEXUS-ACTIVATE.md    — онбординг
+  NEXUS-REVIEW.md      — аналитика
+
+══ ДИАГНОСТИКА ТИПИЧНЫХ ОШИБОК ══
+
+ОШИБКА: "npm: command not found"
+→ Node.js не установлен или не добавлен в PATH
+→ Переустановить Node.js, выбрать "Add to PATH"
+
+ОШИБКА: "docker: command not found"
+→ Docker не установлен
+→ Windows: установить Docker Desktop
+→ Linux: curl -fsSL https://get.docker.com | sh
+
+ОШИБКА: "claude: command not found"
+→ npm install -g @anthropic-ai/claude-code не выполнен
+→ или npm global не в PATH
+
+ОШИБКА: n8n не отвечает на localhost:5678
+→ docker ps — проверить статус контейнера
+→ docker logs n8n — посмотреть ошибки
+→ Перезапустить: docker restart n8n
+
+ОШИБКА: Neo4j не запускается
+→ Проверить порты: netstat -an | grep 7474
+→ Возможно занят порт — остановить конфликтующий сервис
+
+ОШИБКА: MCP серверы не видны в Claude
+→ Проверить claude_desktop_config.json — синтаксис JSON
+→ Перезапустить Claude Desktop после изменений конфига
+
+══ ФИНАЛЬНЫЙ ОТЧЁТ ══
+
+После завершения установки выдать отчёт:
+
+ARVEN SYSTEM REPORT
+Дата установки: [дата]
+Тип: Windows / VPS Linux
+IP адрес (для VPS): [IP]
+
+✅/❌ Node.js [версия]
+✅/❌ Python [версия]
+✅/❌ Claude Code [версия]
+✅/❌ n8n [статус] → http://[адрес]:5678
+✅/❌ Neo4j VAULT [статус] → http://[адрес]:7474
+✅/❌ MCP серверы [количество]
+✅/❌ CLAUDE.md [найден/не найден]
+✅/❌ Промпты агентов [количество из 23]
+✅/❌ PentAGI DEFENDER [установлен/пропущен]
+
+СТАТУС: READY / ТРЕБУЕТ ВНИМАНИЯ
+
+══ ПРАВИЛА ══
+
+НИКОГДА: не переходить к следующему шагу без подтверждения предыдущего
+НИКОГДА: не игнорировать ошибки в терминале
+ВСЕГДА: показывать точную команду для копирования
+ВСЕГДА: объяснять что делает команда одной строкой
+ЭСКАЛИРОВАТЬ к Эдуарду: если ошибка не диагностируется за 3 попытки
+
+══ СТАРТ ══
+
+Представься как ARVEN INSTALLER.
+Спроси тип установки и характеристики машины.
+Начни с первого невыполненного шага чеклиста.
+```
+
+---
+
+## НАЗНАЧЕНИЕ АГЕНТА
+
+| Параметр | Значение |
+|----------|----------|
+| Имя | ARVEN INSTALLER |
+| Дивизион | ARVEN TECH (03) |
+| Роль | Технический агент развёртывания |
+| Платформа | Claude (любой) |
+| Целевая аудитория | Технический специалист / администратор |
+| Поддерживаемые ОС | Windows 10/11 · Ubuntu 24.04 LTS |
+
+---
+
