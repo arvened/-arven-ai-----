@@ -1,19 +1,593 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
 <meta charset="UTF-8">
-<title>ARVEN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARVEN AUDIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Chakra+Petch:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-body { background-color: #041026 !important; color: #CFB53B !important; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: serif; text-shadow: 0 0 10px rgba(207, 181, 59, 0.5); }
-.box { text-align: center; border: 2px solid #CFB53B; padding: 60px; box-shadow: 0 0 30px rgba(4, 16, 38, 0.9); }
-h1 { letter-spacing: 20px; font-size: 5rem; margin: 0; text-transform: uppercase; font-weight: bold; }
-p { letter-spacing: 5px; font-size: 1.1rem; margin-top: 20px; font-family: sans-serif; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  background: #08061a;
+  color: #f0ede6;
+  font-family: 'Chakra Petch', monospace;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  background: #08061a;
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d4af37;
+  letter-spacing: 7px;
+  text-decoration: none;
+}
+.nav-links { display:flex; gap:28px; list-style:none; }
+.nav-links a {
+  color: #7a6fa0;
+  text-decoration: none;
+  font-size: .64rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: color .3s;
+}
+.nav-links a:hover { color: #d4af37; }
+.nav-cta {
+  border: 1px solid #d4af37 !important;
+  color: #d4af37 !important;
+  padding: 7px 18px;
+}
+.nav-cta:hover {
+  background: #d4af37 !important;
+  color: #08061a !important;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, #0e0a2e 0%, #08061a 100%);
+  padding: 80px 40px 80px;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .62rem;
+  letter-spacing: 5px;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.eyebrow::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: #d4af37;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 300;
+  line-height: 1.02;
+  color: #f0ede6;
+  margin-bottom: 8px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: #d4af37;
+}
+.hero-sub {
+  font-size: clamp(.82rem, 1.6vw, 1rem);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #7a6fa0;
+  font-weight: 300;
+  margin-bottom: 36px;
+}
+.hero-body {
+  font-size: .92rem;
+  line-height: 1.9;
+  color: #a89cc0;
+  max-width: 540px;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+.hero-body strong { color: #d4af37; font-weight: 600; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn {
+  font-family: 'Chakra Petch', monospace;
+  font-size: .7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 13px 32px;
+  text-decoration: none;
+  transition: all .25s;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+.btn-gold {
+  background: #d4af37;
+  color: #08061a;
+  font-weight: 600;
+}
+.btn-gold:hover {
+  background: #f0cc55;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  border: 1px solid rgba(212,175,55,0.4);
+  color: #d4af37;
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: #d4af37;
+  background: rgba(212,175,55,0.08);
+}
+
+/* STAT BAR */
+.stat-bar {
+  background: #0e0a2e;
+  border-top: 1px solid rgba(212,175,55,0.15);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+  padding: 24px 40px;
+  display: flex;
+  gap: 48px;
+  overflow-x: auto;
+}
+.stat { flex-shrink: 0; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d4af37;
+  line-height: 1;
+}
+.stat-lbl {
+  font-size: .58rem;
+  letter-spacing: 3px;
+  color: #7a6fa0;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* SECTION */
+.wrap { max-width: 1000px; margin: 0 auto; padding: 80px 40px; }
+.sec-tag {
+  font-size: .58rem;
+  letter-spacing: 5px;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 48px;
+  color: #f0ede6;
+}
+.sec-title em { font-style: italic; color: #d4af37; }
+
+/* CARDS */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2px;
+}
+.card {
+  background: #12103a;
+  border: 1px solid rgba(74,47,160,0.4);
+  padding: 32px 26px;
+  transition: border-color .3s, background .3s;
+}
+.card:hover {
+  background: #1a1550;
+  border-color: rgba(212,175,55,0.3);
+}
+.card-icon { font-size: 1.6rem; margin-bottom: 14px; }
+.card-title {
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #d4af37;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.card-text {
+  font-size: .76rem;
+  line-height: 1.75;
+  color: #8a7db8;
+  font-weight: 300;
+}
+.card-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-top: 14px;
+}
+
+/* STEPS */
+.steps { display: flex; flex-direction: column; gap: 2px; }
+.step {
+  background: #12103a;
+  border: 1px solid rgba(74,47,160,0.4);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  align-items: start;
+  transition: background .3s, border-color .3s;
+}
+.step:hover {
+  background: #1a1550;
+  border-color: rgba(212,175,55,0.25);
+}
+.step-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: rgba(212,175,55,0.22);
+  line-height: 1;
+}
+.step-title {
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f0ede6;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.step-desc {
+  font-size: .76rem;
+  line-height: 1.75;
+  color: #8a7db8;
+  font-weight: 300;
+}
+
+/* BAND */
+.band {
+  background: #0e0a2e;
+  border-top: 1px solid rgba(212,175,55,0.18);
+  border-bottom: 1px solid rgba(212,175,55,0.18);
+  padding: 72px 40px;
+  text-align: center;
+}
+.formula {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.55;
+  color: #f0ede6;
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+.formula strong { color: #d4af37; font-weight: 600; }
+.formula-note {
+  font-size: .6rem;
+  letter-spacing: 4px;
+  color: #7a6fa0;
+  text-transform: uppercase;
+}
+
+/* PILOT BOX */
+.pilot {
+  background: #12103a;
+< truncated lines 297-320 >
+  max-width: 440px;
+  font-weight: 300;
+}
+.pilot-list {
+  list-style: none;
+  text-align: left;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.pilot-list li {
+  font-size: .8rem;
+  color: #c0b4d8;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+.pilot-list li::before { content: '→'; position: absolute; left: 0; color: #d4af37; }
+
+/* CONTACT */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+.c-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #f0ede6;
+}
+.c-title em { font-style: italic; color: #d4af37; }
+.c-desc {
+  font-size: .82rem;
+  line-height: 1.85;
+  color: #8a7db8;
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+.founder-box {
+  background: #12103a;
+  border: 1px solid rgba(74,47,160,0.4);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+.founder-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: #d4af37;
+  margin-bottom: 3px;
+}
+.founder-role {
+  font-size: .58rem;
+  letter-spacing: 3px;
+  color: #7a6fa0;
+  text-transform: uppercase;
+}
+.clinks { display: flex; flex-direction: column; gap: 8px; }
+.clink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  background: #12103a;
+  border: 1px solid rgba(74,47,160,0.35);
+  text-decoration: none;
+  color: #f0ede6;
+  font-size: .78rem;
+  letter-spacing: 1px;
+  transition: all .25s;
+}
+.clink:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+  background: #1a1550;
+}
+.clbl {
+  font-size: .56rem;
+  letter-spacing: 3px;
+  color: #b8941f;
+  min-width: 64px;
+  text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+  background: #08061a;
+  border-top: 1px solid rgba(212,175,55,0.15);
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.f-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: #d4af37;
+  letter-spacing: 7px;
+}
+.f-tag { font-size: .58rem; letter-spacing: 4px; color: #7a6fa0; text-transform: uppercase; margin-top: 4px; }
+.f-info { font-size: .58rem; color: rgba(122,111,160,0.45); letter-spacing: 2px; text-align: right; line-height: 2; }
+
+@media(max-width: 700px){
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 52px 20px; }
+  .stat-bar { padding: 18px 20px; gap: 28px; }
+  .wrap { padding: 60px 20px; }
+  .band { padding: 52px 20px; }
+  .pilot { padding: 36px 20px; }
+  .contact-grid { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+  footer { padding: 22px 20px; }
+  .f-info { text-align: left; }
+}
 </style>
 </head>
 <body>
-<div class="box">
-<h1>АРВЕН</h1>
-<p>GLOBAL AI INFRASTRUCTURE</p>
+
+<nav>
+  <a href="#" class="logo">ARVEN</a>
+  <ul class="nav-links">
+    <li><a href="#problem">Проблема</a></li>
+    <li><a href="#how">Як працює</a></li>
+    <li><a href="#model">Модель</a></li>
+    <li><a href="#contact" class="nav-cta">Зв'язатись</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">Київ, Україна · 2026</div>
+  <h1>ARVEN<br><em>AUDIT</em></h1>
+  <p class="hero-sub">Автономний AI для українського бізнесу</p>
+  <p class="hero-body">
+    Ваш бізнес втрачає від <strong>15% до 40% маржі</strong> через
+    операційну сліпоту. Не через погану роботу команди —
+    через те, що людський мозок фізично не встигає відслідковувати
+    всі деталі в умовах кадрового дефіциту.<br><br>
+    ARVEN AUDIT — автономне аналітичне ядро,
+    яке працює 24/7 і знаходить те, що люди пропускають.
+  </p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn btn-gold">Отримати пілот безкоштовно</a>
+    <a href="#how" class="btn btn-outline">Як це працює</a>
+  </div>
 </div>
+
+<!-- STATS -->
+<div class="stat-bar">
+  <div class="stat"><div class="stat-num">40%</div><div class="stat-lbl">Прихованих втрат маржі</div></div>
+  <div class="stat"><div class="stat-num">30 000+</div><div class="stat-lbl">Бізнесів закрились за рік</div></div>
+  <div class="stat"><div class="stat-num">24/7</div><div class="stat-lbl">Аналіз без зупинок</div></div>
+  <div class="stat"><div class="stat-num">0₴</div><div class="stat-lbl">Стартових витрат</div></div>
+</div>
+
+<!-- PROBLEM -->
+<div class="wrap" id="problem">
+  <div class="sec-tag">Проблема</div>
+  <h2 class="sec-title">Чому бізнес<br><em>недоотримує дохід</em></h2>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-icon">👥</div>
+      <div class="card-title">Кадровий дефіцит</div>
+      <div class="card-text">Через міграцію та мобілізацію навантаження на тих, хто залишився, зросло втричі. Люди працюють на межі.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔍</div>
+      <div class="card-title">Операційна сліпота</div>
+      <div class="card-text">Коли всі перевантажені — дрібниці випадають. Саме в них ховаються втрати.</div>
+      <div class="card-big">–40%</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <div class="card-title">Швидкі зміни</div>
+      <div class="card-text">Логістика, постачання, персонал, ціни — змінюються щотижня. Ручний аналіз не встигає.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW -->
+<div class="wrap" id="how" style="padding-top:0;">
+  <div class="sec-tag">Рішення</div>
+  <h2 class="sec-title">Як працює<br><em>ARVEN AUDIT</em></h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">01</div>
+      <div>
+        <div class="step-title">Інтеграція в структуру</div>
+        <div class="step-desc">Розгортається у приватному контурі — Docker, Private Cloud. Дані не виходять назовні. Повна безпека та незалежність.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">02</div>
+      <div>
+        <div class="step-title">Аналіз 24/7</div>
+        <div class="step-desc">Графова база Neo4j обробляє масиви операційних даних і виявляє приховані точки доходу — ті, що людина фізично не може помітити.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">03</div>
+      <div>
+        <div class="step-title">Конкретні рекомендації</div>
+        <div class="step-desc">Система не просто показує цифри — підказує дії: де втрати, як адаптувати процес, що змінити прямо зараз.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">04</div>
+      <div>
+        <div class="step-title">Команда посилюється</div>
+        <div class="step-desc">Ваші спеціалісти займаються живою роботою. Складну аналітику бере на себе система. Люди не замінюються — вони звільняються від рутини.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BAND -->
+<div class="band">
+  <p class="formula">Ми не замінюємо людей.<br>Ми стаємо їх <strong>інтелектуальною опорою.</strong></p>
+  <p class="formula-note">ARVEN AUDIT · Автономна система · Київ, Україна · 2026</p>
+</div>
+
+<!-- MODEL -->
+<div class="wrap" id="model">
+  <div class="sec-tag">Модель роботи</div>
+  <h2 class="sec-title">Revenue Share —<br><em>оплата за результат</em></h2>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">Без стартових інвестицій</div>
+      <div class="card-text">Ви не платите авансом. Ми отримуємо лише відсоток від фактичного прибутку або ліквідованих втрат.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Суверенний стек</div>
+      <div class="card-text">Self-hosted n8n + Docker у вашому приватному контурі. Повна безпека даних. Незалежність від зовнішніх сервісів.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Швидкий старт</div>
+      <div class="card-text">Пілот розгортається за 3–7 днів. Перші результати — до кінця першого тижня. Без довгих впроваджень.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PILOT -->
+<div class="wrap" style="padding-top:0; padding-bottom:80px;">
+  <div class="pilot">
+    <div class="diamond"></div>
+    <div class="pilot-title">Безкоштовний пілот</div>
+    <p class="pilot-desc">Відбираємо 2 підприємства для повністю безкоштовного пілоту. Ми розгортаємо. Ви тестуєте. Ви вирішуєте.</p>
+    <ul class="pilot-list">
+      <li>Аналіз одного реального процесу вашого бізнесу</li>
+      <li>2 тижні живої роботи системи</li>
+      <li>Повний звіт: втрати, можливості, ROI</li>
+      <li>Жодної оплати. Жодних зобов'язань.</li>
+    </ul>
+    <a href="mailto:hello@arvend.io" class="btn btn-gold">Подати заявку на пілот</a>
+    <div class="diamond" style="margin:24px auto 0;"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-grid" id="contact">
+  <div>
+    <h2 class="c-title">Побудуємо<br><em>разом</em></h2>
+    <p class="c-desc">ARVEN AI Agency — команда з професійним досвідом роботи на різних ринках. Будуємо в умовах війни — бо найкращий час будувати те, що переживе війну, це зараз.</p>
+  </div>
+  <div class="clinks">
+    <a href="mailto:hello@arvend.io" class="clink"><span class="clbl">Email</span>hello@arvend.io</a>
+    <a href="tel:+380954763406" class="clink"><span class="clbl">Телефон</span>+380 (95) 476-34-06</a>
+    <a href="https://t.me/arven_agency" class="clink"><span class="clbl">Telegram</span>@arven_agency</a>
+    <a href="https://linkedin.com/in/eduardarbitman" class="clink"><span class="clbl">LinkedIn</span>Eduard Arbitman</a>
+    <a href="mailto:hello@arvend.io" class="btn btn-gold" style="text-align:center; margin-top:10px;">Написати нам</a>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="f-logo">ARVEN</div>
+    <div class="f-tag">Good Just Happens</div>
+  </div>
+  <div class="f-info">
+    ARVEN AI Agency · arvend.io<br>
+    ФОП Арбітман Е.Д. · ІПН 2277914618<br>
+    Київ, Україна · 2026
+  </div>
+</footer>
+
 </body>
 </html>
